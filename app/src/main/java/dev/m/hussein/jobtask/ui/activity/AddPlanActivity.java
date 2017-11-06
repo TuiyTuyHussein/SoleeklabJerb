@@ -120,6 +120,7 @@ public class AddPlanActivity extends AppCompatActivity implements View.OnClickLi
         plan.invitees = seekBar.getSelectedMaxValue().intValue();
 
 
+
         Gson gson = new Gson();
         Intent output = new Intent();
         output.putExtra(TAG_PLAN, gson.toJson(plan));
