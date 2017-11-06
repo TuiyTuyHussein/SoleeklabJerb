@@ -374,6 +374,7 @@ public class ArcProgress extends View {
         }
 
 
+        canvas.save();
         canvas.restore();
 
 

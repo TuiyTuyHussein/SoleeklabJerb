@@ -65,8 +65,9 @@
                 </LinearLayout>
 
                 <dev.m.hussein.jobtask.ui.custom.progress.ArcProgress
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
                     android:id="@+id/progress"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:layout_width="150dp"
                     app:arc_finished_color="@color/colorPrimary"

@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class PlansAdapter extends RecyclerView.Adapter<PlansAdapter.Holder> {
     private Context context;
     private List<Plan> array = new LinkedList<>();
     private char[] alphapits;
+    DecimalFormat df = new DecimalFormat("#");
 
     public PlansAdapter(Context context) {
         this.context = context;
@@ -62,7 +64,7 @@ public class PlansAdapter extends RecyclerView.Adapter<PlansAdapter.Holder> {
         holder.planText.setText(context.getString(R.string.plan).concat(" ").concat(String.valueOf(alphapits[position > alphapits.length ? alphapits.length : position])));
         holder.locationTxt.setText(plan.location);
         holder.inviteesTxt.setText(String.valueOf(plan.invitees).concat("+").concat(context.getString(R.string.friends_family)));
-        holder.budgetTxt.setText(context.getString(R.string.planned_cost).concat(" ").concat(String.valueOf(plan.budget).concat("L.E")));
+        holder.budgetTxt.setText(context.getString(R.string.planned_cost).concat(" ").concat(df.format(plan.budget)).concat("L.E"));
 
     }
 
