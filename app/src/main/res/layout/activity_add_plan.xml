@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="dev.m.hussein.jobtask.ui.activity.AddPlanActivity">
+
+   <include layout="@layout/toolbar_add_plan"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:text="@string/celebrating_at"
+                    android:textColor="@color/colorPrimary"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="20dp"
+
+                    android:drawableStart="@mipmap/ic_location"
+                    android:drawableLeft="@mipmap/ic_location" />
+
+                <android.support.v7.widget.AppCompatAutoCompleteTextView
+                    android:layout_marginRight="45dp"
+                    android:layout_marginLeft="45dp"
+                    android:minHeight="50dp"
+                    android:id="@+id/locationEditText"
+                    android:drawableStart="@mipmap/ic_location_1"
+                    android:drawableLeft="@mipmap/ic_location_1"
+                    android:drawablePadding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/locationCheckbox"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <dev.m.hussein.jobtask.ui.custom.checkbox.SmoothCheckBox
+                        android:id="@+id/locaCheckbox"
+                        app:color_checked="@color/colorPrimary"
+                        app:color_tick="@color/white"
+                        app:color_unchecked_stroke="@color/unfinished_progress"
+                        app:color_unchecked="@color/background"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:text="@string/we_have_not_decided"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatTextView
+
+                    android:gravity="center"
+                    android:text="@string/how_many_friends"
+                    android:textColor="@color/colorPrimary"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="20dp"
+
+                    android:drawableStart="@mipmap/ic_celebration"
+                    android:drawableLeft="@mipmap/ic_location" />
+
+
+                <LinearLayout
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginTop="12dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_friends_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <dev.m.hussein.jobtask.ui.custom.seekbar.CustomSeekBar
+                        android:id="@+id/inviteesSeekbar"
+                        android:layout_weight="1"
+                        app:absoluteMinValue="100"
+                        app:absoluteMaxValue="1000"
+                        app:valuesAboveThumbs="true"
+                        app:activeColor="@color/light_black"
+                        app:defaultColor="@color/white"
+                        app:showLabels="false"
+                        app:internalPadding="-11dp"
+                        app:textAboveThumbsColor="@color/light_black"
+                        app:activateOnDefaultValues="true"
+                        app:barHeight="2.5dp"
+                        app:alwaysActive="true"
+                        app:step="50"
+                        app:singleThumb="true"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_marginTop="12dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_friends_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:text="@string/planning_to_spend"
+                    android:textColor="@color/colorPrimary"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="20dp"
+
+                    android:drawableStart="@mipmap/ic_money"
+                    android:drawableLeft="@mipmap/ic_money" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/budgetEditText"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginLeft="45dp"
+                    android:minHeight="50dp"
+                    android:inputType="number"
+                    android:hint="@string/default_money"
+                    android:drawableStart="@mipmap/ic_attach_money"
+                    android:drawableLeft="@mipmap/ic_attach_money"
+                    android:drawablePadding="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/budgetCheckbox"
+                    android:orientation="horizontal"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <dev.m.hussein.jobtask.ui.custom.checkbox.SmoothCheckBox
+                        android:id="@+id/budgCheckbox"
+                        app:color_checked="@color/colorPrimary"
+                        app:color_tick="@color/white"
+                        app:color_unchecked_stroke="@color/unfinished_progress"
+                        app:color_unchecked="@color/background"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:text="@string/we_have_not_decided"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

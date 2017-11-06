@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Jerb</string>
+    <string name="days">Days</string>
+    <string name="sec">Sec</string>
+    <string name="min">Mins</string>
+    <string name="hours">Hours</string>
+    <string name="add_cover">ADD COVER</string>
+    <string name="tips">Tips Before Wedding</string>
+    <string name="to_do">To Do List</string>
+    <string name="title_activity_add_plan">AddPlanActivity</string>
+    <string name="next">Next</string>
+    <string name="celebrating_at">You\'re celebrating at</string>
+    <string name="we_have_not_decided">We havn\'t decided yet.</string>
+    <string name="how_many_friends"><![CDATA[How many friends & family?]]></string>
+    <string name="demo_min_label">Min</string>
+    <string name="demo_max_label">Max</string>
+    <string name="planning_to_spend">Planning to spend</string>
+    <string name="default_money">0</string>
+    <string name="love_story">Love Story</string>
+    <string name="any">Any</string>
+    <string name="min_hint">Budget must more than 10000</string>
+    <string name="max_hint">Budget must less than 100000000</string>
+    <string name="plan">Plan</string>
+    <string name="friends_family"><![CDATA[Family & Friends]]></string>
+    <string name="planned_cost">Planned Cost:</string>
+
+
+    <string-array name="cities">
+        <item>6th of October City</item>
+        <item>10th of Ramadan City</item>
+        <item>Abu Kabir</item>
+        <item>Akhmim</item>
+        <item>Al-Mansura</item>
+        <item>Al-Minya</item>
+        <item>Al-Hamidiyya</item>
+        <item>Alexandria</item>
+        <item>Arish</item>
+        <item>Aswan</item>
+        <item>Cairo</item>
+        <item>Giza</item>
+        <item>Shubra El-Kheima</item>
+        <item>Port Said</item>
+        <item>Suez</item>
+        <item>Luxor</item>
+        <item>El-Mahalla El-Kubra</item>
+        <item>Tanta</item>
+        <item>Asyut</item>
+        <item>Ismailia</item>
+        <item>Fayyum</item>
+        <item>Zagazig</item>
+        <item>Damietta</item>
+        <item>Damanhur</item>
+        <item>Beni Suef</item>
+        <item>Qena</item>
+        <item>Sohag</item>
+        <item>Hurghada</item>
+        <item>Shibin El Kom</item>
+        <item>Banha</item>
+        <item>Kafr el-Sheikh</item>
+        <item>Mallawi</item>
+        <item>Bilbais</item>
+        <item>Marsa Matruh</item>
+        <item>Idfu</item>
+        <item>Mit Ghamr</item>
+        <item>Desouk</item>
+        <item>Qalyub</item>
+        <item>Kafr el-Dawwar</item>
+        <item>Girga</item>
+        <item>Matareya</item>
+    </string-array>
+</resources>

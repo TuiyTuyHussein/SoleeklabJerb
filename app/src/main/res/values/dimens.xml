@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="thumb_width">30dp</dimen>
+    <dimen name="thumb_height">30dp</dimen>
+
+</resources>

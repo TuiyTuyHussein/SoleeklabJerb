@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="dev.m.hussein.jobtask.ui.activity.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        layout="@layout/toolbar_main"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:background="#00ffffff"
+            android:id="@+id/app_bar"
+            app:elevation="0dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <ImageView
+                        android:id="@+id/cover"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/cover_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                        <LinearLayout
+                            android:id="@+id/dateLayout"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/TextAppearance.AppCompat.Medium"
+                                    android:padding="2dp"
+                                    android:shadowColor="@color/white"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="18"
+                                    android:layout_gravity="center"
+                                    android:text="@string/days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:padding="2dp"
+                                    android:shadowColor="@color/white"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="18"
+                                    android:id="@+id/daysText"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    style="@style/TextAppearance.AppCompat.Display1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:padding="2dp"
+                                    android:shadowColor="@color/white"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="18"
+                                    style="@style/TextAppearance.AppCompat.Medium"
+                                    android:layout_gravity="center"
+                                    android:text="@string/hours"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:padding="2dp"
+                                    android:shadowColor="@color/white"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="18"
+                                    android:id="@+id/hoursText"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    style="@style/TextAppearance.AppCompat.Display1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:padding="2dp"
+                                    android:shadowColor="@color/white"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="18"
+                                    style="@style/TextAppearance.AppCompat.Medium"
+                                    android:layout_gravity="center"
+                                    android:text="@string/min"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:padding="2dp"
+                                    android:shadowColor="@color/white"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="18"
+                                    android:id="@+id/minText"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    style="@style/TextAppearance.AppCompat.Display1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:padding="2dp"
+                                    android:shadowColor="@color/white"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="18"
+                                    style="@style/TextAppearance.AppCompat.Medium"
+                                    android:layout_gravity="center"
+                                    android:text="@string/sec"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:padding="2dp"
+                                    android:shadowColor="@color/white"
+                                    android:shadowDx="0.0"
+                                    android:shadowDy="0.0"
+                                    android:shadowRadius="18"
+                                    android:id="@+id/secText"
+                                    android:layout_gravity="center"
+                                    android:text="0"
+                                    style="@style/TextAppearance.AppCompat.Display1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    <android.support.v7.widget.AppCompatButton
+                        android:clickable="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:id="@+id/addCover"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:text="@string/add_cover"
+
+                        style="?attr/actionButtonStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/content_frame"
+            android:fillViewport="true"
+            android:padding="5dp"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/plansListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_margin="15dp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/tips"
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/tipsListView"
+                        android:minHeight="150dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <ProgressBar
+                        android:id="@+id/tipsProgress"
+                        android:scaleX="0.4"
+                        android:scaleY="0.4"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:text="@string/to_do"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_gravity="center"
+
+                        android:layout_width="20dp"
+                        android:layout_height="0.01dp"/>
+                    <View
+                        android:layout_gravity="center"
+                        android:background="@color/unfinished_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.01dp"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/todoListView"
+                        android:minHeight="150dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <ProgressBar
+                        android:id="@+id/todoProgress"
+                        android:scaleX="0.4"
+                        android:scaleY="0.4"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addPlan"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        app:fabSize="normal"
+        android:clickable="true"
+        android:src="@mipmap/ic_add"
+        android:tint="@color/white"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>
